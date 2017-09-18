@@ -70,6 +70,8 @@ module.exports = {
 
   plugins: [
     extractSass,
+    
+    new webpack.HotModuleReplacementPlugin(),
 
     new HtmlWebpackPlugin({
       inject: false,
@@ -88,6 +90,7 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   }
 };
